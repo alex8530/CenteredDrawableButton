@@ -2,6 +2,7 @@ CenteredDrawableButton
 =======================
 
 [![JitPack](https://jitpack.io/v/kobakei/CenteredDrawableButton.svg)](https://jitpack.io/#kobakei/CenteredDrawableButton)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-CenteredDrawableButton-green.svg?style=true)](https://android-arsenal.com/details/1/3222)
 
 Android custom button with centered drawable
 
