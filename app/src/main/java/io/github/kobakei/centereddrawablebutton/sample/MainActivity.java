@@ -31,4 +31,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void onButton3Click(View v) {
+        Toast.makeText(MainActivity.this, "Clicked 3", Toast.LENGTH_SHORT).show();
+    }
 }

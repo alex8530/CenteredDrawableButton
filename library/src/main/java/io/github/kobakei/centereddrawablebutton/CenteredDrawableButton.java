@@ -38,6 +38,8 @@ public class CenteredDrawableButton extends LinearLayout {
         int textSize = a.getDimensionPixelSize(R.styleable.CenteredDrawableButton_textSize, 0);
 
         ImageView imageView = new ImageView(context, attrs);
+        imageView.setClickable(false);
+        imageView.setDuplicateParentStateEnabled(true);
         if (drawableLeft != null) {
             imageView.setImageDrawable(drawableLeft);
             imageView.setVisibility(View.VISIBLE);
@@ -52,6 +54,8 @@ public class CenteredDrawableButton extends LinearLayout {
         addView(imageView);
 
         TextView textView = new TextView(context, attrs);
+        textView.setDuplicateParentStateEnabled(true);
+        textView.setClickable(false);
         textView.setText(text);
         if (textColor >= 0) {
             textView.setTextColor(textColor);
