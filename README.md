@@ -1,7 +1,11 @@
 CenteredDrawableButton
 =======================
 
+![JitPack](https://jitpack.io/v/kobakei/CenteredDrawableButton.svg)
+
 Android custom button with centered drawable
+
+![Screenshot](https://raw.githubusercontent.com/kobakei/CenteredDrawableButton/master/photos/screenshot.png)
 
 ## Gradle
 
