@@ -31,6 +31,16 @@
         cdb:drawableLeft="@android:drawable/ic_menu_add"
         cdb:drawablePadding="@dimen/drawable_padding"
         cdb:text="@string/button2"
-        cdb:textColor="@color/white"
+        cdb:textColor="@color/text"
         cdb:textSize="@dimen/font"/>
+
+    <io.github.kobakei.centereddrawablebutton.CenteredDrawableButton
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#ff0000"
+        android:layout_marginTop="16dp"
+        cdb:text="Button 3 (No drawable)"
+        cdb:textColor="#ffffff"
+        cdb:textSize="16sp"/>
 </LinearLayout>
