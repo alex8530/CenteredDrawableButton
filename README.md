@@ -1,7 +1,7 @@
 CenteredDrawableButton
 =======================
 
-![JitPack](https://jitpack.io/v/kobakei/CenteredDrawableButton.svg)
+[![JitPack](https://jitpack.io/v/kobakei/CenteredDrawableButton.svg)](https://jitpack.io/#kobakei/CenteredDrawableButton)
 
 Android custom button with centered drawable
 
@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.kobakei:CenteredDrawableButton:1.0.0'
+    compile 'com.github.kobakei:CenteredDrawableButton:1.0.1'
 }
 ```
 
