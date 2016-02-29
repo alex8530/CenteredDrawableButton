@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.kobakei:CenteredDrawableButton:1.0.1'
+    compile 'com.github.kobakei:CenteredDrawableButton:1.0.2'
 }
 ```
 
@@ -31,7 +31,8 @@ dependencies {
         app:drawablePadding="@dimen/drawable_padding"
         app:text="@string/foo"
         app:textColor="@color/white"
-        app:textSize="@dimen/font_size"/>
+        app:textSize="@dimen/font_size"
+        app:textStyle="bold|italic"/>
 ```
 
 ## License

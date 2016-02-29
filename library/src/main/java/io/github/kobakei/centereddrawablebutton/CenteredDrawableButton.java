@@ -3,6 +3,7 @@ package io.github.kobakei.centereddrawablebutton;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -36,10 +37,12 @@ public class CenteredDrawableButton extends LinearLayout {
         int textColor = a.getColor(R.styleable.CenteredDrawableButton_textColor, -1);
         ColorStateList textColorStateList = a.getColorStateList(R.styleable.CenteredDrawableButton_textColor);
         int textSize = a.getDimensionPixelSize(R.styleable.CenteredDrawableButton_textSize, 0);
+        int textStyle = a.getInt(R.styleable.CenteredDrawableButton_textStyle, 0);
 
         ImageView imageView = new ImageView(context, attrs);
         imageView.setClickable(false);
         imageView.setDuplicateParentStateEnabled(true);
+        imageView.setBackgroundColor(getResources().getColor(android.R.color.transparent));
         if (drawableLeft != null) {
             imageView.setImageDrawable(drawableLeft);
             imageView.setVisibility(View.VISIBLE);
@@ -57,6 +60,7 @@ public class CenteredDrawableButton extends LinearLayout {
         textView.setDuplicateParentStateEnabled(true);
         textView.setClickable(false);
         textView.setText(text);
+        textView.setBackgroundColor(getResources().getColor(android.R.color.transparent));
         if (textColor >= 0) {
             textView.setTextColor(textColor);
         }
@@ -66,6 +70,8 @@ public class CenteredDrawableButton extends LinearLayout {
         if (textSize > 0) {
             textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
         }
+        Typeface tf = Typeface.defaultFromStyle(textStyle);
+        textView.setTypeface(tf);
         LinearLayout.LayoutParams params2 = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
         textView.setLayoutParams(params2);
         addView(textView);
