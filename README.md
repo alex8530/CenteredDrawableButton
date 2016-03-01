@@ -10,7 +10,7 @@ Android custom button with centered drawable
 
 ## Gradle
 
-```
+```groovy
 repositories {
     maven { url "https://jitpack.io" }
 }
