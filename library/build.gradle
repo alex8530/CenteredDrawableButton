@@ -29,7 +29,7 @@ publish {
     userOrg = 'kobakei'
     groupId = 'io.github.kobakei'
     artifactId = 'centereddrawablebutton'
-    publishVersion = '1.0.2'
+    publishVersion = '1.0.3'
     desc = 'Android custom button with centered drawable'
     website = 'https://github.com/kobakei/CenteredDrawableButton'
 }
