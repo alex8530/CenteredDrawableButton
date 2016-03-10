@@ -1,6 +1,7 @@
 CenteredDrawableButton
 =======================
 
+[ ![Download](https://api.bintray.com/packages/kobakei/maven/centereddrawablebutton/images/download.svg) ](https://bintray.com/kobakei/maven/centereddrawablebutton/_latestVersion)
 [![JitPack](https://jitpack.io/v/kobakei/CenteredDrawableButton.svg)](https://jitpack.io/#kobakei/CenteredDrawableButton)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-CenteredDrawableButton-green.svg?style=true)](https://android-arsenal.com/details/1/3222)
 
@@ -10,15 +11,15 @@ Android custom button with centered drawable
 
 ## Gradle
 
-```groovy
-repositories {
-    maven { url "https://jitpack.io" }
-}
+Add the following dependency to your app build.gradle.
 
+```groovy
 dependencies {
-    compile 'com.github.kobakei:CenteredDrawableButton:1.0.3'
+    compile 'io.github.kobakei:CenteredDrawableButton:1.0.3'
 }
 ```
+
+[JitPack.io](https://jitpack.io/#kobakei/CenteredDrawableButton) is also available.
 
 ## Usage
 
