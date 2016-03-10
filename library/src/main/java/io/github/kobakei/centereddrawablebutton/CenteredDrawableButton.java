@@ -18,15 +18,22 @@ import android.widget.TextView;
 public class CenteredDrawableButton extends RelativeLayout {
     public CenteredDrawableButton(Context context) {
         super(context);
-        initializeView(context, null);
+        initializeView(context, null, 0);
     }
     public CenteredDrawableButton(Context context, AttributeSet attrs) {
         super(context, attrs);
-        initializeView(context, attrs);
+        initializeView(context, attrs, 0);
+    }
+    public CenteredDrawableButton(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        initializeView(context, attrs, defStyleAttr);
     }
 
-    private void initializeView(Context context, AttributeSet attrs) {
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.CenteredDrawableButton);
+    private void initializeView(Context context, AttributeSet attrs, int defStyleAttr) {
+        TypedArray a = context.obtainStyledAttributes(attrs,
+                R.styleable.CenteredDrawableButton,
+                defStyleAttr,
+                0);
 
         Drawable drawableLeft = a.getDrawable(R.styleable.CenteredDrawableButton_drawableLeft);
         Drawable drawableRight = a.getDrawable(R.styleable.CenteredDrawableButton_drawableRight);
