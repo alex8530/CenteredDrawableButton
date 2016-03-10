@@ -1,6 +1,10 @@
 Change Log
 ===========
 
+## 1.0.4 (2016-03-11)
+
+- Bintray release. No features are added.
+
 ## 1.0.3 (2016-03-10)
 
 - Support right/top/bottom drawables.

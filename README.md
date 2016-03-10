@@ -15,7 +15,7 @@ Add the following dependency to your app build.gradle.
 
 ```groovy
 dependencies {
-    compile 'io.github.kobakei:CenteredDrawableButton:1.0.3'
+    compile 'io.github.kobakei:centereddrawablebutton:1.0.4'
 }
 ```
 
