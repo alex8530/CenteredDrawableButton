@@ -1,6 +1,10 @@
 Change Log
 ===========
 
+## 1.0.3 (2016-03-10)
+
+- Support right/top/bottom drawables.
+
 ## 1.0.2 (2016-02-29)
 
 - Support text style.
