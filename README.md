@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.kobakei:CenteredDrawableButton:1.0.2'
+    compile 'com.github.kobakei:CenteredDrawableButton:1.0.3'
 }
 ```
 
