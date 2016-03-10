@@ -6,4 +6,6 @@
 
     <color name="white">#ffffff</color>
     <color name="gray">#333333</color>
+    <color name="emerald">#2ecc71</color>
+    <color name="nephritis">#27ae60</color>
 </resources>

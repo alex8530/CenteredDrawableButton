@@ -8,16 +8,14 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 /**
  * Custom button class with centered drawable.
  * Created by keisukekobayashi on 16/02/29.
  */
-public class CenteredDrawableButton extends LinearLayout {
+public class CenteredDrawableButton extends RelativeLayout {
     public CenteredDrawableButton(Context context) {
         super(context);
         initializeView(context, null);
@@ -31,30 +29,18 @@ public class CenteredDrawableButton extends LinearLayout {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.CenteredDrawableButton);
 
         Drawable drawableLeft = a.getDrawable(R.styleable.CenteredDrawableButton_drawableLeft);
-        int drawablePadding = a.getDimensionPixelSize(R.styleable.CenteredDrawableButton_drawablePadding, 0);
+        Drawable drawableRight = a.getDrawable(R.styleable.CenteredDrawableButton_drawableRight);
+        Drawable drawableTop = a.getDrawable(R.styleable.CenteredDrawableButton_drawableTop);
+        Drawable drawableBottom = a.getDrawable(R.styleable.CenteredDrawableButton_drawableBottom);
+        int drawablePadding =
+                a.getDimensionPixelSize(R.styleable.CenteredDrawableButton_drawablePadding, 0);
 
         CharSequence text = a.getText(R.styleable.CenteredDrawableButton_text);
         int textColor = a.getColor(R.styleable.CenteredDrawableButton_textColor, -1);
-        ColorStateList textColorStateList = a.getColorStateList(R.styleable.CenteredDrawableButton_textColor);
+        ColorStateList textColorStateList =
+                a.getColorStateList(R.styleable.CenteredDrawableButton_textColor);
         int textSize = a.getDimensionPixelSize(R.styleable.CenteredDrawableButton_textSize, 0);
         int textStyle = a.getInt(R.styleable.CenteredDrawableButton_textStyle, 0);
-
-        ImageView imageView = new ImageView(context, attrs);
-        imageView.setClickable(false);
-        imageView.setDuplicateParentStateEnabled(true);
-        imageView.setBackgroundColor(getResources().getColor(android.R.color.transparent));
-        if (drawableLeft != null) {
-            imageView.setImageDrawable(drawableLeft);
-            imageView.setVisibility(View.VISIBLE);
-        } else {
-            imageView.setVisibility(View.GONE);
-        }
-        if (drawablePadding > 0) {
-            imageView.setPadding(0, 0, drawablePadding, 0);
-        }
-        LinearLayout.LayoutParams params1 = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        imageView.setLayoutParams(params1);
-        addView(imageView);
 
         TextView textView = new TextView(context, attrs);
         textView.setDuplicateParentStateEnabled(true);
@@ -70,13 +56,16 @@ public class CenteredDrawableButton extends LinearLayout {
         if (textSize > 0) {
             textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
         }
+        textView.setCompoundDrawablesWithIntrinsicBounds(drawableLeft, drawableTop, drawableRight, drawableBottom);
+        textView.setCompoundDrawablePadding(drawablePadding);
         Typeface tf = Typeface.defaultFromStyle(textStyle);
         textView.setTypeface(tf);
-        LinearLayout.LayoutParams params2 = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        textView.setLayoutParams(params2);
+        RelativeLayout.LayoutParams params
+                = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        params.addRule(RelativeLayout.CENTER_IN_PARENT);
+        textView.setLayoutParams(params);
+        textView.setGravity(Gravity.CENTER_VERTICAL);
         addView(textView);
-
-        setGravity(Gravity.CENTER);
 
         a.recycle();
     }

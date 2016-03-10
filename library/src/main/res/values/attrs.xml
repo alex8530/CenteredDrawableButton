@@ -2,6 +2,9 @@
 <resources>
     <declare-styleable name="CenteredDrawableButton">
         <attr name="drawableLeft" format="reference" />
+        <attr name="drawableRight" format="reference" />
+        <attr name="drawableTop" format="reference" />
+        <attr name="drawableBottom" format="reference" />
         <attr name="drawablePadding" format="dimension" />
         <attr name="text" format="string" />
         <attr name="textSize" format="dimension" />

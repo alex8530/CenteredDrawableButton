@@ -15,7 +15,7 @@
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="#ff0000"
+        android:background="#1abc9c"
         cdb:drawableLeft="@android:drawable/ic_menu_add"
         cdb:drawablePadding="16sp"
         cdb:text="Button 1"
@@ -40,11 +40,28 @@
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="@drawable/button_bg"
+        android:background="#f1c40f"
         android:layout_marginTop="16dp"
         android:onClick="onButton3Click"
         cdb:text="Button 3 (No drawable)"
         cdb:textColor="#ffffff"
         cdb:textSize="16sp"/>
+
+    <io.github.kobakei.centereddrawablebutton.CenteredDrawableButton
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e98b39"
+        android:layout_marginTop="16dp"
+        android:padding="5dp"
+        cdb:drawableLeft="@android:drawable/ic_menu_add"
+        cdb:drawableRight="@android:drawable/ic_menu_add"
+        cdb:drawableTop="@android:drawable/ic_menu_add"
+        cdb:drawableBottom="@android:drawable/ic_menu_add"
+        cdb:drawablePadding="4sp"
+        cdb:text="Button 4 (with 4 drawables)"
+        cdb:textColor="#ffffff"
+        cdb:textSize="16sp"
+        cdb:textStyle=""/>
 
 </LinearLayout>
