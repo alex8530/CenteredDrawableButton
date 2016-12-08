@@ -1,6 +1,10 @@
 Change Log
 ===========
 
+## 1.0.5 (2016-12-08)
+
+- Add `getTextView`.
+
 ## 1.0.4 (2016-03-11)
 
 - Bintray release. No features are added.
