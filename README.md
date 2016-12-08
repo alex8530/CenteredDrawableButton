@@ -15,9 +15,11 @@ Add the following dependency to your app build.gradle.
 
 ```groovy
 dependencies {
-    compile 'io.github.kobakei:centereddrawablebutton:1.0.4'
+    compile 'io.github.kobakei:centereddrawablebutton:x.y.z'
 }
 ```
+
+`x,y,z` is [ ![Download](https://api.bintray.com/packages/kobakei/maven/centereddrawablebutton/images/download.svg) ](https://bintray.com/kobakei/maven/centereddrawablebutton/_latestVersion)
 
 [JitPack.io](https://jitpack.io/#kobakei/CenteredDrawableButton) is also available.
 
