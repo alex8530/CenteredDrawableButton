@@ -16,6 +16,9 @@ import android.widget.TextView;
  * Created by keisukekobayashi on 16/02/29.
  */
 public class CenteredDrawableButton extends RelativeLayout {
+
+    private TextView textView;
+
     public CenteredDrawableButton(Context context) {
         super(context);
         initializeView(context, null, 0);
@@ -49,7 +52,7 @@ public class CenteredDrawableButton extends RelativeLayout {
         int textSize = a.getDimensionPixelSize(R.styleable.CenteredDrawableButton_textSize, 0);
         int textStyle = a.getInt(R.styleable.CenteredDrawableButton_textStyle, 0);
 
-        TextView textView = new TextView(context, attrs);
+        textView = new TextView(context, attrs);
         textView.setDuplicateParentStateEnabled(true);
         textView.setClickable(false);
         textView.setText(text);
@@ -75,5 +78,9 @@ public class CenteredDrawableButton extends RelativeLayout {
         addView(textView);
 
         a.recycle();
+    }
+
+    public TextView getTextView() {
+        return textView;
     }
 }
